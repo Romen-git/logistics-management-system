@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="WebPU" transaction-type="JTA">
+        <jta-data-source>jdbc/web24</jta-data-source>
+        <class>com.ro.ejb.entity.User</class>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+        </properties>
+        <shared-cache-mode>DISABLE_SELECTIVE</shared-cache-mode>
+    </persistence-unit>
+</persistence>
